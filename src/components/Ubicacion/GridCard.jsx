@@ -7,12 +7,14 @@ export const GridCard = () => {
     const { ubicaciones } = useContext(UbicacionContext)
 
     return (
-        <div className="container">
+        <div className="col-10">
             {
                 ubicaciones.length > 0 ?
                     (
                         ubicaciones.map(ubicacion => (
-                            <Card key={[ubicacion.latitude, ubicacion.longitude]} {...ubicacion} />
+                            <div key={ubicacion.id} >
+                                {ubicacion.name}
+                            </div>
                         ))
                     ) :
                     (
