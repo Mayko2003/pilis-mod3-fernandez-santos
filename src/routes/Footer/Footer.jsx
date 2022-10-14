@@ -4,12 +4,12 @@ export const Footer = () => {
     const year = new Date().getFullYear();
     return (
         <>
-            <div class="container my-5" className="footer" id="footer">
-                <div class="container">
-                    <hr class="my-5" />
-                    <section class="mb-5">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-lg-8">
+            <div className="container my-5 footer" id="footer">
+                <div className="container">
+                    <hr className="my-5" />
+                    <section className="mb-5">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-lg-8">
                                 <p>
                                     PILIS - Fernandez - Santos - {year}
                                 </p>
