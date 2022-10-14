@@ -15,19 +15,21 @@ export const CreateCard = () => {
     const navigate = useNavigate()
 
     const onSubmitForm = (data) => {
-        let lat, long
+        let lat, long, pais
         getCity(data.nombre).then(({ results }) => {
             console.log(results[0])
             lat = results[0].latitude
             long = results[0].longitude
+            pais = results[0].country
             getWeather(lat, long).then(res => {
                 const city = {
                     id: ubicaciones.length + 1,
                     name: data.nombre,
                     lat: lat,
                     long: long,
+                    pais: pais,
+                    windspeed: res.current_weather.windspeed,
                     temp: res.current_weather.temperature,
-                    windspeed: res.current_weather.windspeed
                 }
                 setUbicaciones([...ubicaciones, city])
             })
