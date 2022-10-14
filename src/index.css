@@ -1,15 +1,16 @@
-#body{
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(8,158,164,1) 55%, rgba(0,212,255,1) 100%);
+#body {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(8, 158, 164, 1) 55%, rgba(0, 212, 255, 1) 100%);
     min-height: 140vh;
 }
-#titulo{
+
+#titulo {
     color: white;
 }
 
-#footer{
+#footer {
     position: relative;
-  bottom: 0;
-  width: 100%;
-  color: white;
+    bottom: 0;
+    width: 100%;
+    color: white;
 }
