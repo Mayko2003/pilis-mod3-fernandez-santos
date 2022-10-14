@@ -10,6 +10,7 @@ export const getData = async () => {
             name: "San Salvador de Jujuy",
             lat: -24.19457,
             lon: -65.29712,
+            pais: "Argentina",
             temp: data.current_weather.temperature,
             windspeed: data.current_weather.windspeed,
         }
@@ -26,6 +27,7 @@ export const getData = async () => {
             name: "Ciudad de Salta",
             lat: -24.19457,
             lon: -65.29712,
+            pais: "Argentina",
             temp: data.current_weather.temperature,
             windspeed: data.current_weather.windspeed,
         }
