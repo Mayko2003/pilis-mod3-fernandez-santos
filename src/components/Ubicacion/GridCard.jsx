@@ -7,31 +7,27 @@ export const GridCard = () => {
     const { ubicaciones } = useContext(UbicacionContext)
 
     return (
-        <div className="col-10">
+        <div className="col-10 mx-auto">
             {
-                ubicaciones.length > 0 ?
+                ubicaciones ?
                     (
-                        ubicaciones.map(ubicacion => (
-                            <div className="mt-3 col-6 mx-auto card p-3 shadow-lg" key={ubicacion.id} >
-                                <center><h1><font color="blue">Ciudad</font></h1></center>
-                                <i class="fa fa-city">{" Ciuadad: " + ubicacion.name}</i>
-                                <br />
-                                <i class="fa fa-location-arrow mt-3">{" Latitud: " + ubicacion.lat}</i>
-                                <br />
-                                <i class="fa fa-location-arrow mt-3">{" Longitud: " + ubicacion.lon}</i>
-                                <br />
-                                <i class="fa fa-globe mt-3">{" Pais: " + ubicacion.pais}</i>
-                                <br />
-                                <i class="fa fa-wind mt-3">{" Velocidad de Viento: " + ubicacion.winspeed}</i>
-                                <br />
-                                <i class="fa fa-temperature-high mt-3">{" Temperatura: " + ubicacion.temp + "ºC"}</i>
-                            </div>
-                        ))
+                        ubicaciones.length > 0 ?
+                            (
+                                ubicaciones.map(ubicacion => (
+                                    <Card key={ubicacion.id} {...ubicacion} />
+                                ))
+                            ) :
+                            (
+                                <h3 className="text-center text-secondary mt-5">No hay ubicaciones</h3>
+                            )
                     ) :
                     (
-                        <div className="spinner-border mx-auto" role="status">
-                            <span className="visually-hidden">Loading...</span>
+                        <div className="d-flex justify-content-center mt-5">
+                            <div className="spinner-border" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
                         </div>
+
                     )
             }
         </div>

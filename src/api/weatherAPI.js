@@ -13,7 +13,7 @@ export const getWeather = async (latitud,longitud) => {
 
 export const getCity = async (nombre) => {
     try{
-        const response = await fetch(`${SERVER_DOMAIN2}&name=${nombre}`)
+        const response = await fetch(`${SERVER_DOMAIN2}&name=${nombre}&count=20`)
         return response.json()
     }
     catch(error){
